@@ -1,0 +1,110 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="~/App_MasterPages/SMT.Master.cs" Inherits="mojoPortal.Web.SMT" %>
+<!DOCTYPE html>
+<html>
+<head id="Head1" runat="server"><title></title>
+    <portal:StyleSheetCombiner id="StyleSheetCombiner" runat="server" UseIconsForAdminLinks="false" />
+    <portal:IEStyleIncludes id="IEStyleIncludes1"  runat="server" IncludeHtml5Script="true" />
+    <portal:MetaContent id="MetaContent" runat="server" />
+	<!--[if IE]>
+	<meta http-equiv="Page-Enter" content="blendTrans(Duration=0)" /><meta http-equiv="Page-Exit" content="blendTrans(Duration=0)" />
+	<![endif]-->
+	<meta name="viewport" content="width=670, initial-scale=0.45, minimum-scale=0.45"/>
+	<portal:Favicon id="Favicon1"  runat="server" />
+	<portal:ScriptLoader id="ScriptLoader1" runat="server" />
+    <link rel="stylesheet" href="../Content/smt.css" />
+
+    <script type="text/javascript" src="../ClientScript/common.js"></script>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic">
+</head>
+<body class="pagebody">
+<form id="frmMain" runat="server">
+<asp:SiteMapDataSource ID="SiteMapData" runat="server" ShowStartingNode="false" />
+<asp:SiteMapDataSource ID="PageMapDataSource" runat="server" ShowStartingNode="false" />
+<asp:SiteMapDataSource ID="ChildPageSiteMapData" runat="server" ShowStartingNode="false" />
+<asp:ScriptManager ID="ScriptManager1" EnablePageMethods="true" runat="server" />
+
+<portal:AutoHidePanel ID="ah1" runat="server">
+<div id="toolbarbut"> 
+<span class="showbar"><a href="#">show bar</a></span>
+</div>
+<div id="toolbar"> 
+<div class="toolbarleft"> 
+  &nbsp;
+</div>
+<div class="toolbarright"> 
+  <span class="downarr"> 
+  <a href="#"></a>
+  </span>
+  <portal:AdminMenuLink id="lnkAdminMenu" runat="server" />
+  <portal:FileManagerLink id="lnkFileManager" runat="server" />
+  <portal:NewPageLink id="lnkNewPage" runat="server" />
+  <portal:PageEditFeaturesLink id="lnkPageContent" runat="server" />
+  <portal:PageEditSettingsLink id="lnkPageSettings" runat="server" />
+  <asp:ContentPlaceHolder ID="pageEditContent" runat="server"></asp:ContentPlaceHolder>
+</div>
+</div>
+</portal:AutoHidePanel>
+<portal:mojoGoogleAnalyticsScript ID="mojoGoogleAnalyticsScript1" runat="server" />
+<portal:Woopra ID="woopra11" runat="server" />
+        
+<div class="w-nav navbar" data-collapse="medium" data-animation="default" data-duration="400" data-contain="1">
+   <div class="w-container">
+      <a class="w-nav-brand brand" href="../home.aspx">
+          <img src="http://uploads.webflow.com/541b9733d4c14cd218cdacf4/541b9b565fadb592250b07d2_logo.png" width="80">
+      </a>
+      <nav class="w-nav-menu nav-menu-mobile" role="navigation">
+          <a class="w-nav-link nev-link w--current" href="../Blogs" style="max-width: 940px;">Blogs</a>
+          <a class="w-nav-link nev-link" href="../Forums" style="max-width: 940px;">Forums</a>
+          <a class="w-nav-link nev-link" href="#features" style="max-width: 940px;">Search</a>
+         
+        <ul class="w-nav-link nev-link menu" style="max-width: 940px;">
+        <li>
+            <a href="javascript:;" id="menusignin">
+                <portal:LoginLink id="LoginLink" runat="server" RenderAsListItem="true" />
+                <portal:RegisterLink id="RegisterLink" runat="server" RenderAsListItem="true" />
+                <portal:WelcomeMessage id="WelcomeMessage" runat="server" /></a>        
+            <ul class="menufly dark-section">
+                <li><a href="#"><portal:MyPageLink id="MyPageLink1" runat="server" RenderAsListItem="true" /></a></li>
+                <li><a href="#"><portal:UserProfileLink id="UserProfileLink" runat="server" RenderAsListItem="true" /></a></li>
+                <li><a href="#"><portal:LogoutLink id="LogoutLink" runat="server" RenderAsListItem="true" /></a></li>
+            </ul>
+        </li>
+        </ul>
+      </nav>
+      <div class="w-nav-button menu-button">
+         <div class="w-icon-nav-menu hamburger-menu-icon"></div>
+      </div>
+   </div>
+   <div class="w-nav-overlay" data-wf-ignore=""></div>
+</div>
+<asp:Panel id="divLeft" runat="server" cssclass="leftside" visible="True" SkinID="pnlPlain">
+	<portal:PageMenu id="PageMenu1" runat="server" UseTreeView="true" TreeViewShowExpandCollapse="true"  />
+	<a id="startcontent"></a>
+	<asp:contentplaceholder ID="leftContent" runat="server"></asp:contentplaceholder>
+</asp:Panel>
+<asp:Panel id="divCenter" runat="server" visible="True">
+    <portal:Breadcrumbs id="Breadcrumbs" runat="server"></portal:Breadcrumbs>
+	<portal:ChildPageMenu id="ChildPageMenu" runat="server" CssClass="txtnormal"></portal:ChildPageMenu>
+	<asp:ContentPlaceHolder ID="mainContent" runat="server"></asp:ContentPlaceHolder>
+</asp:Panel>
+<asp:Panel id="divRight" runat="server" visible="True" cssclass="rightside" SkinID="pnlPlain">
+		<asp:contentplaceholder ID="rightContent" runat="server"></asp:contentplaceholder>
+</asp:Panel>		
+    <div class="footer-section">
+        <div class="w-container">
+            <div class="w-row">
+                <div class="w-col w-col-6">
+                    <div class="copyright-text">© 2015 ShareMyTravel.com All Rights RESERVED&nbsp;</div>
+                </div>
+                <div class="w-col w-col-6 social-footer"><a class="w-inline-block social-link" href="#">
+                    <img src="http://uploads.webflow.com/541b9733d4c14cd218cdacf4/542b0a72fbc0335c3026b76f_facebook.png" width="32"></a><a class="w-inline-block social-link" href="#"><img src="http://uploads.webflow.com/541b9733d4c14cd218cdacf4/542b0aacfbc0335c3026b772_google.png" width="32"></a><a class="w-inline-block social-link" href="#"><img src="http://uploads.webflow.com/541b9733d4c14cd218cdacf4/542b0ab6ae69925e30aca21e_twitter.png" width="32"></a><a class="w-inline-block social-link" href="#"><img src="http://uploads.webflow.com/541b9733d4c14cd218cdacf4/542b0ac979d626721bf9cec5_linkedin.png" width="32"></a><a class="w-inline-block social-link" href="#"><img src="http://uploads.webflow.com/541b9733d4c14cd218cdacf4/542b0acf79d626721bf9cec6_dribbble.png" width="32"></a></div>
+            </div>
+        </div>
+
+    </div>
+</form>
+
+
+
+</body>
+</html>
