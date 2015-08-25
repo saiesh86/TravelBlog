@@ -15,6 +15,7 @@
 
     <script type="text/javascript" src="../ClientScript/common.js"></script>
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic">
+
 </head>
 <body class="pagebody">
 <form id="frmMain" runat="server">
@@ -50,11 +51,12 @@
 <div class="w-nav navbar" data-collapse="medium" data-animation="default" data-duration="400" data-contain="1">
    <div class="w-container">
       <a class="w-nav-brand brand" href="../home.aspx">
-          <img src="http://uploads.webflow.com/541b9733d4c14cd218cdacf4/541b9b565fadb592250b07d2_logo.png" width="80">
+          <%--<img src="http://uploads.webflow.com/541b9733d4c14cd218cdacf4/541b9b565fadb592250b07d2_logo.png" width="80">--%>
+          SHARE MY TRAVEL
       </a>
       <nav class="w-nav-menu nav-menu-mobile" role="navigation">
-          <a class="w-nav-link nev-link w--current" href="../Blogs" style="max-width: 940px;">Blogs</a>
-          <a class="w-nav-link nev-link" href="../Forums" style="max-width: 940px;">Forums</a>
+          <a class="w-nav-link nev-link w--current" href="../Blogs" style="max-width: 940px;">Stories</a>
+          <a class="w-nav-link nev-link" href="../Forums" style="max-width: 940px;">Discussions</a>
           <a class="w-nav-link nev-link" href="#features" style="max-width: 940px;">Search</a>
          
         <ul class="w-nav-link nev-link menu" style="max-width: 940px;">

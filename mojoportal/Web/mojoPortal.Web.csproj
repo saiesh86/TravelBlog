@@ -569,6 +569,7 @@
     <Content Include="BingSearch.aspx" />
     <Content Include="blank.html" />
     <Content Include="Content\images\banner.PNG" />
+    <Content Include="Stories\LatestStories.ascx" />
     <Content Include="home.aspx">
       <SubType>ASPXCodeBehind</SubType>
     </Content>
@@ -1613,6 +1614,13 @@
     </Compile>
     <Compile Include="BingSearch.aspx.designer.cs">
       <DependentUpon>BingSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Stories\LatestStories.ascx.cs">
+      <DependentUpon>LatestStories.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Stories\LatestStories.ascx.designer.cs">
+      <DependentUpon>LatestStories.ascx</DependentUpon>
     </Compile>
     <Compile Include="home.aspx.cs">
       <DependentUpon>home.aspx</DependentUpon>
