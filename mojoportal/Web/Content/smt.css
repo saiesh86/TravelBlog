@@ -251,8 +251,8 @@ p {
   text-transform: uppercase;
 }
 .banner-section {
-  height: 140px;
-  padding-top: 30px;
+  height: 80px;
+  padding-top: 0px;
   background-color: #5cb8e6;
 }
 .banner-text {
@@ -925,7 +925,7 @@ html.w-mod-js *[data-ix="move-down"] {
 .menufly{position:absolute;color: #2996cc;font-size:11px; font-weight:normal !important;}
 .menu a{font-size:13px !important;}
 
-.art-layout-cell{display:block;}
+.art-layout-cell{display:block; margin-top:60px;}
 
 .dark-section{padding-top:20px; border-top:0px !important; 
               padding-bottom:20px !important; 

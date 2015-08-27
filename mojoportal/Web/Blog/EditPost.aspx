@@ -11,19 +11,19 @@
 <portal:OuterBodyPanel ID="pnlOuterBody" runat="server" SkinID="BlogEdit">
 <portal:InnerBodyPanel ID="pnlInnerBody" runat="server" CssClass="modulecontent">
     <asp:Panel ID="pnlBlog" runat="server" DefaultButton="btnUpdate">
-            <div id="divtabs" class="mojo-tabs">
+            <div id="divtabs" class="mojo-tabs" >
                 <ul>
                     <li class="selected"><a href="#tabContent">
                         <asp:Literal ID="litContentTab" runat="server" /></a></li>
-                    <li id="liExcerpt" runat="server">
+                    <li class="smtnoshow" id="liExcerpt" runat="server">
                             <asp:Literal ID="litExcerptTab" runat="server" /></li>
-                    <li><a href="#tabMeta">
+                    <li class="smtnoshow" ><a href="#tabMeta">
                         <asp:Literal ID="litMetaTab" runat="server" /></a></li>
-                    <li><a href="#tabMapSettings">
+                    <li class="smtnoshow" ><a href="#tabMapSettings">
                         <asp:Literal ID="litMapSettingsTab" runat="server" /></a></li>
-                    <li id="liAttachment" runat="server">
+                    <li class="smtnoshow"  id="liAttachment" runat="server">
                         <asp:Literal ID="litAttachmentsTab" runat="server" /></li>
-                    <li id="liGoogleNewsSettigns" runat="server">
+                    <li class="smtnoshow"  id="liGoogleNewsSettigns" runat="server">
                         <asp:Literal ID="litGoogleNewsSettingsTab" runat="server" /></li>
                 </ul>
                        
@@ -44,6 +44,17 @@
                             <mpe:EditorControl ID="edContent" runat="server">
                             </mpe:EditorControl>
                         </div>
+                          <div class="settingrow">
+                                <img alt=" " id="imgThumb" runat="server" src="/Data/SiteImages/1x1.gif" />
+                            </div>
+                            <div class="settingrow">  
+                                <portal:jQueryFileUpload ID="JQueryFileUpload1" runat="server" />
+                                <asp:HiddenField ID="HiddenField1" Value="" runat="server" />
+                            </div>
+                            <div class="settingrow">
+                                <portal:mojoLabel ID="lblMessage" runat="server" CssClass="txterror" />
+                            </div>
+
                         <div id="divUrl" runat="server" class="settingrow">
                             <mp:SiteLabel ID="SiteLabel5" runat="server" ForControl="txtItemUrl" CssClass="settinglabel"
                                 ConfigKey="BlogEditItemUrlLabel" ResourceFile="BlogResources"></mp:SiteLabel>
@@ -74,23 +85,23 @@
                             </asp:HyperLink>
                             <br />
                         </asp:Panel>
-                        <div class="settingrow">
+                        <div class="settingrow smtnoshow">
                             <mp:SiteLabel ID="Sitelabel1" runat="server" ForControl="chkIncludeInFeed" ConfigKey="BlogEditIncludeInFeedLabel"
                                 ResourceFile="BlogResources" CssClass="settinglabel"></mp:SiteLabel>
                             <asp:CheckBox ID="chkIncludeInFeed" runat="server" CssClass="forminput"></asp:CheckBox>
                         </div>
-                        <div class="settingrow">
+                        <div class="settingrow smtnoshow">
                             <mp:SiteLabel ID="Sitelabel25" runat="server" ForControl="chkIncludeInSearchIndex" ConfigKey="IncludeInSearchIndex"
                                 ResourceFile="BlogResources" CssClass="settinglabel"></mp:SiteLabel>
                             <asp:CheckBox ID="chkIncludeInSearchIndex" runat="server" CssClass="forminput" Checked="true"></asp:CheckBox>
                         </div>
-                        <div id="divExcludeFromRecentContent" runat="server" class="settingrow">
+                        <div id="divExcludeFromRecentContent" runat="server" class="settingrow  smtnoshow">
                             <mp:SiteLabel ID="Sitelabel14" runat="server" ForControl="chkExcludeFromRecentContent" CssClass="settinglabel"
                                 ConfigKey="ExcludeFromRecentContent"></mp:SiteLabel>
                             <asp:CheckBox ID="chkExcludeFromRecentContent" runat="server" CssClass="forminput"></asp:CheckBox>
                             <portal:mojoHelpLink ID="MojoHelpLink8" runat="server" HelpKey="ExcludeFromRecentContent-help" />
                         </div>
-                        <div class="settingrow">
+                        <div class="settingrow smtnoshow">
                             <mp:SiteLabel ID="Sitelabel31" runat="server" ForControl="chkIncludeInSiteMap" ConfigKey="IncludeInSiteMap"
                                 ResourceFile="BlogResources" CssClass="settinglabel"></mp:SiteLabel>
                             <asp:CheckBox ID="chkIncludeInSiteMap" runat="server" CssClass="forminput" Checked="true"></asp:CheckBox>
@@ -101,19 +112,19 @@
                             <asp:CheckBox ID="chkIsPublished" runat="server" CssClass="forminput" Checked="true">
                             </asp:CheckBox>
                         </div>
-                        <div class="settingrow">
+                        <div class="settingrow smtnoshow">
                             <mp:SiteLabel ID="Sitelabel27" runat="server" ForControl="chkShowAuthorName" ConfigKey="ShowPostAuthorSetting"
                                 ResourceFile="BlogResources" CssClass="settinglabel"></mp:SiteLabel>
                             <asp:CheckBox ID="chkShowAuthorName" runat="server" CssClass="forminput" Checked="true">
                             </asp:CheckBox>
                         </div>
-                        <div class="settingrow">
+                        <div class="settingrow  smtnoshow">
                             <mp:SiteLabel ID="Sitelabel28" runat="server" ForControl="chkShowAuthorAvatar" ConfigKey="ShowAuthorPhoto"
                                 ResourceFile="BlogResources" CssClass="settinglabel"></mp:SiteLabel>
                             <asp:CheckBox ID="chkShowAuthorAvatar" runat="server" CssClass="forminput" Checked="true">
                             </asp:CheckBox>
                         </div>
-                        <div class="settingrow">
+                        <div class="settingrow smtnoshow">
                             <mp:SiteLabel ID="Sitelabel29" runat="server" ForControl="chkShowAuthorBio" ConfigKey="ShowAuthorBio"
                                 ResourceFile="BlogResources" CssClass="settinglabel"></mp:SiteLabel>
                             <asp:CheckBox ID="chkShowAuthorBio" runat="server" CssClass="forminput" Checked="true">
@@ -127,14 +138,14 @@
                             <mp:SiteLabel ID="SiteLabel3" runat="server" ResourceFile="BlogResources" ConfigKey="BlogDraftInstructions"
                                 UseLabelTag="false" />
                         </div>
-                        <div class="settingrow">
+                        <div class="settingrow smtnoshow">
                             <mp:SiteLabel ID="SiteLabel16" runat="server"  ConfigKey="EndDate"
                                 ResourceFile="BlogResources" CssClass="settinglabel"></mp:SiteLabel>
                             <mp:DatePickerControl ID="dpEndDate" runat="server" ShowTime="True" SkinID="blog"  CssClass="forminput">
                             </mp:DatePickerControl>
                             
                         </div>
-                        <div class="settingrow">
+                        <div class="settingrow smtnoshow">
                             <mp:SiteLabel ID="Sitelabel2" runat="server" ForControl="ddCommentAllowedForDays"
                                 ConfigKey="BlogEditAllowedCommentsForDaysPrefix" ResourceFile="BlogResources"
                                 CssClass="settinglabel"></mp:SiteLabel>
@@ -167,7 +178,7 @@
                             <asp:ImageButton ID="btnRestoreFromGreyBox" runat="server" />
                         </div>
                                
-                            <div class="bloghistory">
+                        <div class="bloghistory">
                                 <asp:UpdatePanel ID="updHx" UpdateMode="Conditional" runat="server">
                                     <Triggers>
                                         <asp:PostBackTrigger ControlID="grdHistory" />
