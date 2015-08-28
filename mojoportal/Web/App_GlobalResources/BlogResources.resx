@@ -960,4 +960,7 @@
   <data name="ShowGoogleNewsTabInEditPage" xml:space="preserve">
     <value>Show Google News Settings In Edit Page?</value>
   </data>
+  <data name="CoverImage" xml:space="preserve">
+    <value>CoverImage</value>
+  </data>
 </root>

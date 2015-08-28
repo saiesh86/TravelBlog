@@ -43,18 +43,10 @@
                         <div class="settingrow">
                             <mpe:EditorControl ID="edContent" runat="server">
                             </mpe:EditorControl>
+                           
                         </div>
-                          <div class="settingrow">
-                                <img alt=" " id="imgThumb" runat="server" src="/Data/SiteImages/1x1.gif" />
-                            </div>
-                            <div class="settingrow">  
-                                <portal:jQueryFileUpload ID="JQueryFileUpload1" runat="server" />
-                                <asp:HiddenField ID="HiddenField1" Value="" runat="server" />
-                            </div>
-                            <div class="settingrow">
-                                <portal:mojoLabel ID="lblMessage" runat="server" CssClass="txterror" />
-                            </div>
-
+                         
+                        
                         <div id="divUrl" runat="server" class="settingrow">
                             <mp:SiteLabel ID="SiteLabel5" runat="server" ForControl="txtItemUrl" CssClass="settinglabel"
                                 ConfigKey="BlogEditItemUrlLabel" ResourceFile="BlogResources"></mp:SiteLabel>
@@ -62,9 +54,19 @@
                             </asp:TextBox>
                             <span id="spnUrlWarning" runat="server" style="font-weight: normal; display:none;" class="txterror">
                             </span>
+                            
                             <asp:HiddenField ID="hdnTitle" runat="server" />
                         </div>
                         
+                        <div class="settingrow" runat="server">
+                             <mp:SiteLabel ID="SiteLabelCoverImage" runat="server" ForControl="txtImgUpload" CssClass="settinglabel"
+                                ConfigKey="CoverImage" ResourceFile="BlogResources">
+                            </mp:SiteLabel>
+                            <asp:Image ID="coverImage" runat="server" Height="100" Width="100" />
+                            <asp:FileUpload ID="FileUpload1" runat="server" />
+                            
+                        </div>
+
                         <asp:Panel ID="pnlCategories" runat="server">
                             <asp:UpdatePanel ID="UpdatePanel1" UpdateMode="Conditional" runat="server">
                                 <ContentTemplate>

@@ -72,21 +72,7 @@ namespace mojoPortal.Web.BlogUI
             moduleTitle.EditText = BlogResources.BlogAddPostLabel;
             moduleTitle.ModuleInstance = GetModule(moduleId);
             moduleTitle.CanEdit = userCanEdit;
-            //if ((userCanEdit) && (countOfDrafts > 0))
-            //{
-            //    moduleTitle.LiteralExtraMarkup =
-            //        "&nbsp;<a href='"
-            //        + SiteRoot
-            //        + "/Blog/EditCategory.aspx?pageid=" + pageId.ToInvariantString()
-            //        + "&amp;mid=" + moduleId.ToInvariantString()
-            //        + "' class='ModuleEditLink' title='" + BlogResources.BlogEditCategoriesLabel + "'>" + BlogResources.BlogEditCategoriesLabel + "</a>"
-            //        + "&nbsp;<a href='"
-            //        + SiteRoot
-            //        + "/Blog/Drafts.aspx?pageid=" + pageId.ToInvariantString()
-            //        + "&amp;mid=" + moduleId.ToInvariantString()
-            //        + "' class='ModuleEditLink' title='" + BlogResources.BlogDraftsLink + "'>" + BlogResources.BlogDraftsLink + "</a>";
-            //}
-            //else 
+
             if (userCanEdit)
             {
                 moduleTitle.LiteralExtraMarkup =

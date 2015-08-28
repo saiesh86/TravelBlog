@@ -17,6 +17,9 @@
                     <asp:HyperLink ID="editLink" runat="server" EnableViewState="false" Text="<%# EditLinkText %>"
                         ToolTip="<%# EditLinkTooltip %>" ImageUrl='<%# EditLinkImageUrl %>' NavigateUrl='<%# this.SiteRoot + "/Blog/EditPost.aspx?pageid=" + PageId.ToString() + "&amp;ItemID=" + DataBinder.Eval(Container.DataItem,"ItemID") + "&amp;mid=" + ModuleId.ToString() %>'
                         Visible='<%# CanEditPost(Convert.ToInt32(Eval("UserID"))) %>' CssClass="ModuleEditLink" /></<%# itemHeadingElement %>>
+                 <div>
+                   <asp:Image ID="blogCoverImage" runat="server" />
+                </div>
                 <asp:Literal ID="litSubtitle" runat="server" EnableViewState="false" Text='<%# FormatSubtitle(Eval("SubTitle").ToString()) %>' />
                 <% if (!displaySettings.PostListUseBottomDate && !TitleOnly)
                    { %>

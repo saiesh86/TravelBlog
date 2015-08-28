@@ -24,6 +24,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
+using System.IO;
 using System.Text;
 using System.Threading;
 using System.Web.UI;
@@ -205,6 +206,13 @@ namespace mojoPortal.Web.BlogUI
                 txtPubKeyWords.Text = blog.PubKeyWords;
                 txtPubStockTickers.Text = blog.PubStockTickers;
                 txtHeadlineImage.Text = blog.HeadlineImageUrl;
+
+
+                //sureshchanges//
+
+                coverImage.ImageUrl = "/Data/CoverImages/" + currentUser.UserId + "/" + itemId.ToString() + ".jpg";
+                //suresh changes end//
+
                 if (blog.HeadlineImageUrl.Length > 0)
                 {
                     imgPreview.ImageUrl = blog.HeadlineImageUrl;
@@ -709,6 +717,10 @@ namespace mojoPortal.Web.BlogUI
                 blog.CreateHistory(siteSettings.SiteGuid);
             }
             blog.Save();
+
+            //added by suresh
+            UploadCoverImage(blog.ItemId.ToInvariantString());
+            //added above by suresh
 
             if (!friendlyUrl.FoundFriendlyUrl)
             {
@@ -1896,6 +1908,42 @@ namespace mojoPortal.Web.BlogUI
 
         #endregion
 
-		
-	}
+        #region customfunctions written by SMT(Suresh)
+        private string UploadCoverImage(string itemid)
+        {
+            CheckFolderExists();
+
+            string currentuserid = currentUser.UserId.ToString();
+            if(FileUpload1.HasFile)
+            { 
+            String ext = System.IO.Path.GetExtension(FileUpload1.FileName);
+            if (FileUpload1.PostedFile.ContentLength > 2000000)
+            {
+                return "Size";
+            }
+            else
+            {
+                FileUpload1.SaveAs(Server.MapPath(@"\Data\CoverImages\" + currentuserid+"/" +itemid + ext));
+
+                return "Success";
+            }
+            }
+            return "NoFile";
+           
+        }
+
+        private void CheckFolderExists()
+        {
+            if (!Directory.Exists(@"C:\Suresh\SMT\mojoportal\Web\Data\CoverImages\" + currentUser.UserId))
+            {
+              
+               System.IO.Directory.CreateDirectory(@"C:\Suresh\SMT\mojoportal\Web\Data\CoverImages\" + currentUser.UserId);
+               
+            }            
+        }
+        #endregion 
+
+
+
+    }
 }

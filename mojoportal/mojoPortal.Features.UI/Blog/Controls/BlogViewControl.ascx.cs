@@ -195,6 +195,9 @@ namespace mojoPortal.Web.BlogUI
 
             heading.Text = blog.Title;
 
+            //suresh changes
+            blogCoverImage.ImageUrl = "/Data/CoverImages/" + currentUser.UserId + "/" + ItemId.ToString() + ".jpg";
+            //surehs changes end
             if ((displaySettings.ShowSubTitleOnDetailPage) && (blog.SubTitle.Length > 0))
             {
                 litSubtitle.Text = "<" + displaySettings.PostDetailSubTitleElement
@@ -660,9 +663,7 @@ namespace mojoPortal.Web.BlogUI
                 = config.ShowBlogSearchBox && !displaySettings.HideSearchBoxInPostDetail
                 && !displaySettings.ShowSearchInNav;
             
-
             
-
            
             //if (config.AddThisCustomBrand.Length > 0)
             //{

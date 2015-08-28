@@ -49,15 +49,6 @@ namespace mojoPortal.Web.BlogUI {
         protected global::mojoPortal.Web.BlogUI.SearchBox searchBoxTop;
         
         /// <summary>
-        /// heading control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::mojoPortal.Web.UI.HeadingControl heading;
-        
-        /// <summary>
         /// pnlOuterBody control.
         /// </summary>
         /// <remarks>
@@ -83,6 +74,15 @@ namespace mojoPortal.Web.BlogUI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::mojoPortal.Web.BlogUI.BlogNav navTop;
+        
+        /// <summary>
+        /// heading control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::mojoPortal.Web.UI.HeadingControl heading;
         
         /// <summary>
         /// divblog control.
@@ -164,6 +164,15 @@ namespace mojoPortal.Web.BlogUI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal litSubtitle;
+        
+        /// <summary>
+        /// blogCoverImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image blogCoverImage;
         
         /// <summary>
         /// pnlDetails control.

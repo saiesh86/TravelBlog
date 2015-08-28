@@ -384,8 +384,11 @@ namespace mojoPortal.Web.BlogUI
                 string result = string.Empty;
                 if ((blogHtml.Length > config.ExcerptLength) && (config.MoreLinkText.Length > 0))
                 {
+                    //suresh change
+                    result = "<div class='excerptimage'><img src='/data/coverimages/"+currentUser.UserId+"/"+itemId+".jpg'/></div>";
+                    //suresh changes end
 
-                    result = UIHelper.CreateExcerpt(blogHtml, config.ExcerptLength, config.ExcerptSuffix);
+                    result += UIHelper.CreateExcerpt(blogHtml, config.ExcerptLength, config.ExcerptSuffix);
                     result += " <a href='" + FormatBlogTitleUrl(url, itemId) + "' class='morelink'>" + config.MoreLinkText + "</a><div class='paddiv'>&nbsp;</div>";
 
                     if(useImage && imageUrl.Length > 0)

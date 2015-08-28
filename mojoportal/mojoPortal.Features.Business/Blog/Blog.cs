@@ -93,7 +93,8 @@ namespace mojoPortal.Business
         private int siteId = -1;
         private string searchIndexPath = string.Empty;
 
-
+       //suresh changes
+        private string coverImageURL = string.Empty;
         
         
 
@@ -287,8 +288,7 @@ namespace mojoPortal.Business
             get { return itemUrl; }
             set { itemUrl = value; }
         }
-
-        //
+        
 
         private bool showAuthorName = true;
 
