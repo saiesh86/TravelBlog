@@ -182,6 +182,7 @@
     <Compile Include="ContentDeleteHandlers\ContentDeleteHandlerProviderConfig.cs" />
     <Compile Include="ContentDeleteHandlers\ContentDeleteHandlerProviderManager.cs" />
     <Compile Include="ContentDeleteHandlers\DoNothingContentDeleteHandler.cs" />
+    <Compile Include="ExtensionMethods\ExtensionGridView.cs" />
     <Compile Include="PageEventHandlers\DoNothingPageCreatedEventHandler.cs" />
     <Compile Include="PageEventHandlers\PageCreatedEventHandlerPovider.cs" />
     <Compile Include="PageEventHandlers\PageCreatedEventHandlerPoviderCollection.cs" />

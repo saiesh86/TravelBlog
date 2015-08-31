@@ -569,7 +569,8 @@
     <Content Include="BingSearch.aspx" />
     <Content Include="blank.html" />
     <Content Include="Content\images\banner.PNG" />
-    <Content Include="Stories\LatestStories.ascx" />
+    <Content Include="Controls\U_LatestStories.ascx" />
+    <Content Include="Controls\U_Stories.ascx" />
     <Content Include="home.aspx">
       <SubType>ASPXCodeBehind</SubType>
     </Content>
@@ -1615,12 +1616,19 @@
     <Compile Include="BingSearch.aspx.designer.cs">
       <DependentUpon>BingSearch.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Stories\LatestStories.ascx.cs">
-      <DependentUpon>LatestStories.ascx</DependentUpon>
+    <Compile Include="Controls\U_LatestStories.ascx.cs">
+      <DependentUpon>U_LatestStories.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Stories\LatestStories.ascx.designer.cs">
-      <DependentUpon>LatestStories.ascx</DependentUpon>
+    <Compile Include="Controls\U_LatestStories.ascx.designer.cs">
+      <DependentUpon>U_LatestStories.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\U_Stories.ascx.cs">
+      <DependentUpon>U_Stories.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\U_Stories.ascx.designer.cs">
+      <DependentUpon>U_Stories.ascx</DependentUpon>
     </Compile>
     <Compile Include="home.aspx.cs">
       <DependentUpon>home.aspx</DependentUpon>
@@ -3964,6 +3972,7 @@
     <Folder Include="Components\api\" />
     <Folder Include="Properties\PublishProfiles\" />
     <Folder Include="Setup\applications\" />
+    <Folder Include="Stories\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Browsers\generic.browser" />

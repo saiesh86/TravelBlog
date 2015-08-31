@@ -209,6 +209,7 @@
     </Compile>
     <Compile Include="ConnectionString.cs" />
     <Compile Include="DBCategoryItem.cs" />
+    <Compile Include="dbBlogs.cs" />
     <Compile Include="DBPaymentLog.cs" />
     <Compile Include="DBSystemLog.cs" />
     <Compile Include="DBTag.cs" />

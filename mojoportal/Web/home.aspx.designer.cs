@@ -11,5 +11,32 @@ namespace mojoPortal.Web.UI {
     
     
     public partial class HomePage {
+        
+        /// <summary>
+        /// FeaturedStories control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::mojoPortal.Web.Controls.CustomControls.U_Stories FeaturedStories;
+        
+        /// <summary>
+        /// U_LatestStories1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::mojoPortal.Web.Controls.CustomControls.U_LatestStories U_LatestStories1;
+        
+        /// <summary>
+        /// TrendingStories control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::mojoPortal.Web.Controls.CustomControls.U_Stories TrendingStories;
     }
 }

@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="c#" CodeBehind="home.aspx.cs" MasterPageFile="~/App_MasterPages/SMT.Master" StylesheetTheme="" AutoEventWireup="false" Inherits="mojoPortal.Web.UI.HomePage" %>
 
+<%@ Register Src="Controls/U_Stories.ascx" TagName="U_Stories" TagPrefix="uc1" %>
+<%@ Register Src="Controls/U_LatestStories.ascx" TagName="U_LatestStories" TagPrefix="uc2" %>
 <%-- @ OutputCache Duration="120" VaryByParam="*"  --%>
 
 <asp:Content ContentPlaceHolderID="mainContent" runat="server">
@@ -74,140 +76,22 @@
             <div class="team-members">
                 <div class="w-row">
                     <div class="dark-section storysection  w-col w-col-3">
-
-                        <h1>Featured</h1>
-
-                        <div>
-                            <img class="team-image" src="http://uploads.webflow.com/541b9733d4c14cd218cdacf4/542382b8d903582652f04e21_team2.jpg"
-                                width="300" data-ix="team-image" style="transition: transform 500ms; transform: scale(1) translateX(0px) translateY(0px);">
-                            <div class="clearfix"></div>
-                            <h5 class="uppercase roboto-slab paddtop1">Family Law</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. </p>
-                            <br>
-                            
-                        </div>
-                        <div>
-                            <img class="team-image" src="http://uploads.webflow.com/541b9733d4c14cd218cdacf4/542382b8d903582652f04e21_team2.jpg"
-                                width="300" data-ix="team-image" style="transition: transform 500ms; transform: scale(1) translateX(0px) translateY(0px);">
-                            <div class="clearfix"></div>
-                            <h5 class="uppercase roboto-slab paddtop1">Family Law</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. </p>
-                            <br>
-                            
-                        </div>
-                        <div>
-                            <img class="team-image" src="http://uploads.webflow.com/541b9733d4c14cd218cdacf4/542382b8d903582652f04e21_team2.jpg"
-                                width="300" data-ix="team-image" style="transition: transform 500ms; transform: scale(1) translateX(0px) translateY(0px);">
-                            <div class="clearfix"></div>
-                            <h5 class="uppercase roboto-slab paddtop1">Family Law</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. </p>
-                            <br>
-                            
-                        </div>
-
+                        <uc1:U_Stories ID="FeaturedStories" runat="server" NumberOfStories="3" Header="FeaturedStories" />
                     </div>
 
                     <div class="dark-section storysection  w-col w-col-7">
-                         <h1>Latest stories</h1>
-                        <div class="w-row">
-                            <div class="dark-section w-col w-col-6">
-                                <img src="http://codelayers.net/templates/hasta/law/fullwidth/images/539.jpg" alt="" class="img-responsive">
-                                <div class="clearfix"></div>
-                                <h5 class="uppercase roboto-slab paddtop1">Family Law</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. </p>
-                                <br>
-                                <a href="#" class="read-more stone">Read Story</a>
-                            </div>
-                            <div class="dark-section w-col w-col-6">
-                                <img src="http://codelayers.net/templates/hasta/law/fullwidth/images/539.jpg" alt="" class="img-responsive">
-                                <div class="clearfix"></div>
-                                <h5 class="uppercase roboto-slab paddtop1">Family Law</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. </p>
-                                <br>
-                                <a href="#" class="read-more stone">Read Story</a>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="dark-section w-col w-col-6">
-                                <img src="http://codelayers.net/templates/hasta/law/fullwidth/images/539.jpg" alt="" class="img-responsive">
-                                <div class="clearfix"></div>
-                                <h5 class="uppercase roboto-slab paddtop1">Family Law</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. </p>
-                                <br>
-                                <a href="#" class="read-more stone">Read Story</a>
-                            </div>
-                            <div class="dark-section w-col w-col-6">
-                                <img src="http://codelayers.net/templates/hasta/law/fullwidth/images/539.jpg" alt="" class="img-responsive">
-                                <div class="clearfix"></div>
-                                <h5 class="uppercase roboto-slab paddtop1">Family Law</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. </p>
-                                <br>
-                                <a href="#" class="read-more stone">Read Story</a>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="dark-section w-col w-col-6">
-                                <img src="http://codelayers.net/templates/hasta/law/fullwidth/images/539.jpg" alt="" class="img-responsive">
-                                <div class="clearfix"></div>
-                                <h5 class="uppercase roboto-slab paddtop1">Family Law</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. </p>
-                                <br>
-                                <a href="#" class="read-more stone">Read Story</a>
-                            </div>
-                            <div class="dark-section w-col w-col-6">
-                                <img src="http://codelayers.net/templates/hasta/law/fullwidth/images/539.jpg" alt="" class="img-responsive">
-                                <div class="clearfix"></div>
-                                <h5 class="uppercase roboto-slab paddtop1">Family Law</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. </p>
-                                <br>
-                                <a href="#" class="read-more stone">Read Story</a>
-                            </div>
-                        </div>
+                        <uc2:U_LatestStories ID="U_LatestStories1" runat="server" Header="LatestStories" />
                     </div>
 
                     <div class="dark-section storysection  w-col w-col-2">
-                         <h1>Trending </h1>
-                        <div>
-                            <img class="team-image" src="http://uploads.webflow.com/541b9733d4c14cd218cdacf4/542382b8d903582652f04e21_team2.jpg"
-                                width="300" data-ix="team-image" style="transition: transform 500ms; transform: scale(1) translateX(0px) translateY(0px);">
-                            <div class="clearfix"></div>
-                            <h5 class="uppercase roboto-slab paddtop1">Family Law</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. </p>
-                            <br>
-                            
-                        </div>
-                        <div>
-                            <img class="team-image" src="http://uploads.webflow.com/541b9733d4c14cd218cdacf4/542382b8d903582652f04e21_team2.jpg"
-                                width="300" data-ix="team-image" style="transition: transform 500ms; transform: scale(1) translateX(0px) translateY(0px);">
-                            <div class="clearfix"></div>
-                            <h5 class="uppercase roboto-slab paddtop1">Family Law</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. </p>
-                            <br>
-                            
-                        </div>
-                        <div>
-                            <img class="team-image" src="http://uploads.webflow.com/541b9733d4c14cd218cdacf4/542382b8d903582652f04e21_team2.jpg"
-                                width="300" data-ix="team-image" style="transition: transform 500ms; transform: scale(1) translateX(0px) translateY(0px);">
-                            <div class="clearfix"></div>
-                            <h5 class="uppercase roboto-slab paddtop1">Family Law</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. </p>
-                            <br>
-                            
-                        </div>
-                        <div>
-                            <img class="team-image" src="http://uploads.webflow.com/541b9733d4c14cd218cdacf4/542382b8d903582652f04e21_team2.jpg"
-                                width="300" data-ix="team-image" style="transition: transform 500ms; transform: scale(1) translateX(0px) translateY(0px);">
-                            <div class="clearfix"></div>
-                            <h5 class="uppercase roboto-slab paddtop1">Family Law</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue. </p>
-                            <br>
-                            
-                        </div>
+                        <uc1:U_Stories ID="TrendingStories" runat="server" NumberOfStories="3" Header="Trending" />
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+
 
 </asp:Content>
 
